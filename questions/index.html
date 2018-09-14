@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <style>
+        [v-cloak] {
+            display: none;
+        }
+        
         * {
             direction: rtl;
             text-align: right;
@@ -42,7 +46,7 @@
     </title>
 </head>
 
-<body dir="rtl">
+<body dir="rtl" v-cloak>
     <div id="app">
 
         <app-toolbar></app-toolbar>
