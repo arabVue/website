@@ -128,8 +128,48 @@ Vue.component("app-questions", {
                     <br/>
                     ولذلك يفضل استخدام vue.js اثناء البناء ومن ثم التحويل الى vue.min.js عند رفع الموقع لصغر حجمه مما يجعل الصفحة تعمل بشكل اسرع
                 `
+                },
+                {
+                    title: "ما هي العناصر (components)",
+                    answer: `
+                        العناصر في ڨيو هي قطع من الكود قابلة لاعادة الاستخدام في صفحات ڨيو. وكل عنصر يحوي على المتغيرات الخاصة به.
+                        <br/>
+                        مثال على العناصر:
+                        <br/>
+<pre><code>Vue.component('button-counter', {
+    template: \`
+        <<span></span>button @click="count++">
+            لقد ضغطتني {{ count }} مرات
+        <<span></span>/button>
+    \`,
+    data: function() {
+        return {
+            count: 0
+        }
+    }
+})
+</code></pre>
+                        ومن ثم استخدامه في الـ HTML بوضع
+                        <<span></span>button-counter><<span></span>/button-counter>
+                        <br/>
+                        <a href="https://jsfiddle.net/87c2o19n/">يمكن عرض المثال من هنا</a>
+                        <br/>
+                        ونرى ان طريقة كتابة المتغيرات تختلف عن كتابتها في new Vue
+<pre><code>data: function() {
+    return {
+        count: 0
+    }
+}</code></pre>
+                        بدلا عن هذه الطريقة
+<pre><code>data: {
+    count: 0
+}</code></pre>
+                        لان العناصر تحتوي على متغيرات خاصة بها واذا لم تكن هكذا فستكون جميع الـ instances للعنصر الواحد تحتوي نفس القيمة
+                        <br/>
+                        وبسبب ذلك هذه الطريق لا تعمل في العناصر لكي لا يحدث ذلك
+                    `
                 }
             ]
         }
-    }
+    },
 });
