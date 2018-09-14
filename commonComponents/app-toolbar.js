@@ -11,9 +11,18 @@ Vue.component("app-toolbar", {
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item" v-for="item in items" :class="{'active' : isActive(item.path) }">
+                    <li class="nav-item" v-for="item in rightItems" :class="{'active' : isActive(item.path) }">
                         <a class="nav-link" :href="item.path">
+                            <i v-if="item.icon" :class="item.icon"></i>
                             {{ item.title }}
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item" v-for="item in leftItems" :class="{'active' : isActive(item.path) }">
+                        <a class="nav-link" :href="item.path">
+                            <i v-if="item.icon" :class="item.icon" style="font-size:24px;" :title="item.title"></i>
+                            <span v-else>{{ item.title }}</span>
                         </a>
                     </li>
                 </ul>
@@ -31,14 +40,24 @@ Vue.component("app-toolbar", {
                     path: "/questions/"
                 },
                 {
-                    title: "...",
-                    path: "/"
+                    title: "المجموعة على تيليقرام",
+                    path: "https://t.me/vuejsarab",
+                    left: true,
+                    icon:"fab fa-telegram"
                 },
                 {
                     title: "...",
                     path: "/"
                 }
             ]
+        }
+    },
+    computed: {
+        rightItems(){
+            return this.items.filter(item => !item.left);
+        },
+        leftItems(){
+            return this.items.filter(item => item.left);
         }
     },
     methods: {
