@@ -18,9 +18,10 @@ Vue.component("app-toolbar", {
                         </a>
                     </li>
                 </ul>
+                
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item" v-for="item in leftItems" :class="{'active' : isActive(item.path) }">
-                        <a class="nav-link" :href="item.path">
+                        <a class="nav-link" :href="item.path" :target="item.target">
                             <i v-if="item.icon" :class="item.icon" style="font-size:24px;" :title="item.title"></i>
                             <span v-else>{{ item.title }}</span>
                         </a>
@@ -43,7 +44,8 @@ Vue.component("app-toolbar", {
                     title: "المجموعة على تيليقرام",
                     path: "https://t.me/vuejsarab",
                     left: true,
-                    icon:"fab fa-telegram"
+                    icon: "fab fa-telegram",
+                    target: "_blank"
                 },
                 {
                     title: "...",
@@ -53,10 +55,10 @@ Vue.component("app-toolbar", {
         }
     },
     computed: {
-        rightItems(){
+        rightItems() {
             return this.items.filter(item => !item.left);
         },
-        leftItems(){
+        leftItems() {
             return this.items.filter(item => item.left);
         }
     },
