@@ -48,8 +48,8 @@ Vue.component("app-toolbar", {
                     target: "_blank"
                 },
                 {
-                    title: "...",
-                    path: "/"
+                    title: "مصادر التعلم",
+                    path: "/resources/"
                 }
             ]
         }
