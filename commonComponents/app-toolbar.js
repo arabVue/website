@@ -41,6 +41,13 @@ Vue.component("app-toolbar", {
                     path: "/questions/"
                 },
                 {
+                    title: "الموقع على القتهب",
+                    path: "https://github.com/ibrahimBeladi/arabVue",
+                    left: true,
+                    icon: "fab fa-github",
+                    target: "_blank"
+                },
+                {
                     title: "المجموعة على تيليقرام",
                     path: "https://t.me/vuejsarab",
                     left: true,
