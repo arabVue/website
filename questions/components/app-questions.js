@@ -9,7 +9,7 @@ Vue.component("app-questions", {
 
             <br />
 
-            <div class="card" v-for="question,i in questions" style="margin-bottom: 20px" :id="i">
+            <div class="card round" v-for="question,i in questions" style="margin-bottom: 20px" :id="i">
                 <div class="card-header">
                     {{ question.title }}
                 </div>
@@ -28,15 +28,15 @@ Vue.component("app-questions", {
                     أحد مميزات ڤيو أنه مبني بشكل بسيط وقوي بنفس الوقت يسهل فهمه والبدء بإستخدامه مباشرة.
                     طبعا يمكنك إستخدام الإطار مع أغلب مكتبات الجافاسكربت التي تعرفها (نعم يمكنك إستخدام jQuery "عند الحاجة") أو مشاريع بنيتها مسبقا ويمكنك ايضا بناء تطبيقات ذات الصفحة الواحدة المعروفة ب Single Page Applications SPA ( أيّ تطبيق بملف index.html واحد وتقوم الجافاسكربت بتغيير محتوى الصفحة دايناميكيا ).
                     <br/>
-                    <a href="https://vuejs.org">
+                    <a href="https://vuejs.org" target="_blank">
                         رابط موقع الإطار
                     </a>
                     <br/>
-                    <a href="https://youtu.be/p1iLqZnZPdo">
+                    <a href="https://youtu.be/p1iLqZnZPdo" target="_blank">
                         مقدمة بسيطة عن الإطار
                     </a>
                     <br/>
-                    <a href="https://jsfiddle.net/10dakzxj/">
+                    <a href="https://jsfiddle.net/10dakzxj/" target="_blank">
                         مثال بسيط لكيفية إستخدام الإطار
                     </a>
                 `
@@ -62,11 +62,11 @@ Vue.component("app-questions", {
                     <br/>
                     هناك ايضا دورات ممتازة مثل:
                     <br/>
-                    <a href="https://www.youtube.com/playlist?list=PL1FWK-sgJ9eljz7Tm5SSUcCt5sxmwoFlC">
+                    <a href="https://www.youtube.com/playlist?list=PL1FWK-sgJ9eljz7Tm5SSUcCt5sxmwoFlC" target="_blank">
                         تعلم ڤيو 2 باللغة العربية (يوتيوب)
                     </a>
                     <br/>
-                    <a href="http://vuecasts.com">
+                    <a href="http://vuecasts.com" target="_blank">
                         وهذه دورة باللغة الانجليزية 
                     </a>
                 `
@@ -75,7 +75,7 @@ Vue.component("app-questions", {
                     title: "ماهي الأمثلة على مشاريع بنيت بإستخدام ڤيو",
                     answer: `
                     بإمكانك الإطلاع على بعض المشاريع التي بنيت بإستخدام ڤيو على 
-                    <a href="https://github.com/vuejs/awesome-vue#projects-using-vuejs">
+                    <a href="https://github.com/vuejs/awesome-vue#projects-using-vuejs" target="_blank">
                         صفحة الـ github
                     </a>
                 `
@@ -93,7 +93,7 @@ Vue.component("app-questions", {
                 {
                     title: "ما الذي يحدث في هاذا المثال",
                     answer: `
-                    <a href="https://jsfiddle.net/bw6z0oyq">
+                    <a href="https://jsfiddle.net/bw6z0oyq" target="_blank">
                         مثال باستخدام طريقة script-tag
                     </a>
                     <br/>
@@ -155,7 +155,7 @@ Vue.component("app-questions", {
                         `) + `
                         ومن ثم استخدامه في الـ HTML بوضع
                         ` + this.showCode(`<button-counter></button-counter>`, "html") + `
-                        <a href="https://jsfiddle.net/87c2o19n/">يمكن عرض المثال من هنا</a>
+                        <a href="https://jsfiddle.net/87c2o19n/" target="_blank">يمكن عرض المثال من هنا</a>
                         <br/>
                         ونرى ان طريقة كتابة المتغيرات تختلف عن كتابتها في new Vue
                         ` + this.showCode(`
@@ -185,7 +185,7 @@ Vue.component("app-questions", {
                         <br/>
                         بإمكاننا التحقق من الشروط بسهولة بإستخدام v-if و v-else
                         <br/>
-                        <a href="https://jsfiddle.net/gheLw82u/4/">كما في المثال التالي</a>
+                        <a href="https://jsfiddle.net/gheLw82u/4/" target="_blank">كما في المثال التالي</a>
                         <br/>
                         نقوم بالتحقق ما إذا كان قام بتسجيل الدخول فنعرض له زر تسجيل الخروج .. بإستخدام v-if="loggedIn"
                         <br/>

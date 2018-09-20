@@ -11,24 +11,12 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    
+
     <!-- Prism -->
     <link rel="stylesheet" href="../lib/prism/prism.css">
 
+    <link rel="stylesheet" href="../css/general.css">
     <style>
-        [v-cloak] {
-            display: none;
-        }
-        
-        * {
-            direction: rtl;
-            text-align: right;
-        }
-
-        .centered *{ 
-            text-align: center
-        }
-
         pre, code{
             direction: ltr;
             text-align: left;   
@@ -57,13 +45,7 @@
 
         <app-toolbar></app-toolbar>
 
-        <div class="jumbotron jumbotron-fluid centered">
-            <div class="container">
-                <h1 class="display-4">
-                    قسم الاسئلة والاجوبة
-                </h1>
-            </div>
-        </div>
+        <app-jumbotron title="قسم الاسئلة والاجوبة"></app-jumbotron>
 
         <app-questions></app-questions>
 
@@ -82,6 +64,7 @@
 <script src="../lib/prism/prism.js"></script>
 
 <script src="../commonComponents/app-toolbar.js"></script>
+<script src="../commonComponents/app-jumbotron.js"></script>
 
 <script src="./components/app-questions.js"></script>
 

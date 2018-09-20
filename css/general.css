@@ -1,0 +1,52 @@
+[v-cloak] {
+    display: none;
+}
+
+* {
+    direction: rtl;
+    text-align: right;
+}
+
+.centered * {
+    text-align: center
+}
+
+body {
+    background-color: #fafafa;
+}
+
+a {
+    color: #41b883
+}
+
+.navbar-nav .active>.nav-link {
+    color: #35495e ;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #41b883;
+}
+
+.section-header {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+    margin-bottom: 10px
+}
+
+.round {
+    border-radius: 20px;
+}
+
+.round .card-header {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.round-button {
+    border-radius: 15px;
+}
+
+.btn {
+    background-color: #41b883;
+    color: #35495e;
+}

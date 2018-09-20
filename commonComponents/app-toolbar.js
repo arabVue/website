@@ -57,6 +57,10 @@ Vue.component("app-toolbar", {
                 {
                     title: "مصادر التعلم",
                     path: "/resources/"
+                },
+                {
+                    title: "التوسع في ڨيو",
+                    path: "/scaling/"
                 }
             ]
         }

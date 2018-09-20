@@ -12,35 +12,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-    <style>
-        [v-cloak] {
-            display: none;
-        }
-        
-        * {
-            direction: rtl;
-            text-align: right;
-        }
-
-        .centered *{ 
-            text-align: center
-        }
-
-        pre, code{
-            direction: ltr;
-            text-align: left;   
-        }
-
-        pre {
-            border: solid 1px #aaa;
-            background-color: #eee;
-            border-radius: 10px;
-            padding: 10px;
-            width: min-content;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/general.css">
 
     <link rel="shortcut icon" type="image/png" href="../assets/images/vue-logo.png" />
 
@@ -54,13 +26,7 @@
 
         <app-toolbar></app-toolbar>
 
-        <div class="jumbotron jumbotron-fluid centered">
-            <div class="container">
-                <h1 class="display-4">
-                    قسم مصادر التعلم
-                </h1>
-            </div>
-        </div>
+        <app-jumbotron title="قسم مصادر التعلم"></app-jumbotron>
 
         <app-resources></app-resources>
 
@@ -76,6 +42,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 <script src="../commonComponents/app-toolbar.js"></script>
+<script src="../commonComponents/app-jumbotron.js"></script>
 
 <script src="./components/app-resources.js"></script>
 

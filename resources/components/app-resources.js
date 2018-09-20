@@ -1,13 +1,13 @@
 Vue.component("app-resources", {
     template: `
         <div class="container">
-            <h2 style="border-bottom: 1px solid lightgray">
+            <h2 class="section-header">
                 المصادر العربية
             </h2>
             <br/>
             <div class="row">
-                <div class="col-sm-4" v-for="item in arabicResources">
-                    <div class="card">
+                <div class="col-12 col-sm-6 col-lg-4" v-for="item in arabicResources">
+                    <div class="card round" style="margin: 10px">
                         <div class="card-header">
                             <h5 class="card-title" style="margin: 0;">
                                 {{ item.title }}
@@ -17,7 +17,7 @@ Vue.component("app-resources", {
                             <p class="card-text">
                                 {{ item.description }}
                             </p>
-                            <a :href="item.link" class="btn btn-primary" target="_blank">
+                            <a :href="item.link" class="btn round-button" target="_blank">
                                 فتح المصدر
                             </a>
                         </div>
@@ -27,13 +27,13 @@ Vue.component("app-resources", {
             <br/>
             <br/>
             <br/>
-            <h2 style="border-bottom: 1px solid lightgray">
+            <h2 class="section-header">
                 المصادر الانغليزية
             </h2>
             <br/>
             <div class="row">
-                <div class="col-sm-4" v-for="item in englishResources">
-                    <div class="card">
+                <div class="col-12 col-sm-6 col-lg-4" v-for="item in englishResources">
+                    <div class="card round" style="margin: 10px">
                         <div class="card-header">
                             <h5 class="card-title" style="margin: 0;">
                                 {{ item.title }}
@@ -43,7 +43,7 @@ Vue.component("app-resources", {
                             <p class="card-text">
                                 {{ item.description }}
                             </p>
-                            <a :href="item.link" class="btn btn-primary" target="_blank">
+                            <a :href="item.link" class="btn round-button" target="_blank">
                                 فتح المصدر
                             </a>
                         </div>
