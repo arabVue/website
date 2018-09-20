@@ -98,24 +98,27 @@ Vue.component("app-questions", {
                     </a>
                     <br/>
                     عند استخدام new Vue فان المكتبة تحتاج الى معرفة نقطة بداية البرنامج فاننا نحتاج الى تحديد نقطة البداية وذلك بتحديدها داخل الـ Object/JSON في new Vue وستكون هكذا
-
-<pre><code>new Vue({
-    el: "#app"
-})</code></pre>
+                    ` + this.showCode(`
+                            new Vue({
+                                el: "#app"
+                            })
+                    `) + `
 
                     وهاذا يعني ان نقطة بداية البرنامج هو الـ tag ذو الـ id الذي يساوي app الموجود في الـ HTML وهكذا يكون قد تم الربط بين Vue والصفحة ولكي نستخدم المكتبة فاننا بحاجة الى متغيرات داخل المكتبة ويكون ذلك باستخدام data داخل الـ Object/JSON الخاص بـ Vue وهو بذاته Object/JSON ايضاً
 
-<pre><code>new Vue({
-    el: "#app",
-    data: {
-        message: "مرحبا بالعالم",
-        a: 5,
-        b: 3
-    }
-});</code></pre>
+                    ` + this.showCode(`
+                            new Vue({
+                                el: "#app",
+                                data: {
+                                    message: "مرحبا بالعالم",
+                                    a: 5,
+                                    b: 3
+                                }
+                            });
+                    `) + `
 
                     بعد هاذا يمكن استخدم المتغيرات المعرفة في الصفحة (داخل #app) باستخدام 
-                    {{ varName }} 
+                    ` + this.showCode(`{{ varName }}`) + `
                     وطريقة البناء هذه تسمى بالـ mustache syntax ( الشارب/الشنب ) ويمكن ان تحتوي على متغيرات و/او عمليات بسيطة اخرى (وبعض الاشياء الاخرى سنتطرق اليها في يوم اخر)
                 `
                 },
@@ -136,42 +139,46 @@ Vue.component("app-questions", {
                         <br/>
                         مثال على العناصر:
                         <br/>
-<pre><code>Vue.component('button-counter', {
-    template: \`
-        <<span></span>button @click="count++">
-            لقد ضغطتني {{ count }} مرات
-        <<span></span>/button>
-    \`,
-    data: function() {
-        return {
-            count: 0
-        }
-    }
-})
-</code></pre>
+                        ` + this.showCode(`
+                                Vue.component('button-counter', {
+                                    template: \`
+                                        <button @click="count++">
+                                            لقد ضغطتني {{ count }} مرات
+                                        </button>
+                                    \`,
+                                    data: function() {
+                                        return {
+                                            count: 0
+                                        }
+                                    }
+                                })
+                        `) + `
                         ومن ثم استخدامه في الـ HTML بوضع
-                        <<span></span>button-counter><<span></span>/button-counter>
-                        <br/>
+                        ` + this.showCode(`<button-counter></button-counter>`, "html") + `
                         <a href="https://jsfiddle.net/87c2o19n/">يمكن عرض المثال من هنا</a>
                         <br/>
                         ونرى ان طريقة كتابة المتغيرات تختلف عن كتابتها في new Vue
-<pre><code>data: function() {
-    return {
-        count: 0
-    }
-}</code></pre>
+                        ` + this.showCode(`
+                                data: function() {
+                                    return {
+                                        count: 0
+                                    }
+                                }
+                        `) + `
                         بدلا عن هذه الطريقة
-<pre><code>data: {
-    count: 0
-}</code></pre>
+                        ` + this.showCode(`
+                                data: {
+                                    count: 0
+                                }
+                        `) + `
                         لان العناصر تحتوي على متغيرات خاصة بها واذا لم تكن هكذا فستكون جميع الـ instances للعنصر الواحد تحتوي نفس القيمة
                         <br/>
                         وبسبب ذلك هذه الطريق لا تعمل في العناصر لكي لا يحدث ذلك
                     `
                 },
                 {
-                    title:"التحقق في فيو",
-                    answer:`
+                    title: "التحقق في فيو",
+                    answer: `
                         ماذا إذا ما أردنا عرض عنصر معين عندما يتحقق شرط محدد.
                         <br/>
                         مثلا نعرض زر تسجيل دخول عند دخول زائر للصفحة أو نعرض زر تسجيل خروج عند دخول مستخدم للصفحة
@@ -180,7 +187,7 @@ Vue.component("app-questions", {
                         <br/>
                         <a href="https://jsfiddle.net/gheLw82u/4/">كما في المثال التالي</a>
                         <br/>
-                        نقوم بالتحقق ما إذا كان قام بتسجيل الدخول فنعرض له زر تسجيل الخروج .. بإستخدام v-if="loggedIn" 
+                        نقوم بالتحقق ما إذا كان قام بتسجيل الدخول فنعرض له زر تسجيل الخروج .. بإستخدام v-if="loggedIn"
                         <br/>
                         لكن إذا لم يكن قام بتسجيل الدخول نقوم بعرض زر تسجيل الدخول بإستخدام  v-else
                         ثم نقوم بعرض رسالة ترحيبية على حسب إذا كان مستخدم أم زائر
@@ -189,4 +196,33 @@ Vue.component("app-questions", {
             ]
         }
     },
+    methods: {
+        showCode(code, type) {
+            // split the code into lines
+            var lines = code.split("\n");
+
+            // remove first and last lines
+            if (lines[lines.length - 1].trim() == "")
+                lines.pop();
+            if (lines[0].trim() == "")
+                lines.shift();
+
+            // remove spaces in front of each line
+            var firstLine = lines[0];
+            var initialPadding = firstLine.length - firstLine.trim().length;
+            lines = lines.map(l => l.substring(initialPadding))
+            code = lines.join("\n");
+
+            // make the tags not render
+            code = code.split("<").join("<<span></span>");
+
+            // wrap with tags
+            if (type == "html")
+                code = "<pre><code class='language-html'>" + code + "</code></pre>";
+            else
+                code = "<pre><code class='language-js'>" + code + "</code></pre>";
+
+            return code;
+        }
+    }
 });
