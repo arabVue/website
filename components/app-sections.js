@@ -28,13 +28,13 @@ Vue.component("app-sections", {
                 },
                 {
                     title: "قسم مصادر التعلم",
-                    description: "بعض مصادر التعلم لڨيو",
+                    description: "بعض مصادر التعلم لـVue",
                     link: "/resources/",
                     icon: "fas fa-graduation-cap"
                 },
                 {
-                    title: "قسم التوسع في ڨيو",
-                    description: "بعض مصادر التوسع في ڨيو",
+                    title: "قسم التوسع في Vue",
+                    description: "بعض مصادر التوسع في Vue",
                     link: "/scaling/",
                     icon: "fas fa-sort-amount-up"
                 }
