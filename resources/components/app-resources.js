@@ -57,17 +57,17 @@ Vue.component("app-resources", {
             items: [{
                     title: "مدونة vuejsdevelopers",
                     link: "https://vuejsdevelopers.com/",
-                    description: "مدونة باللغة الإنجليزية مخصصة لشروحات ڤيو مليانة شروحات ومواضيع ممكن تفيد المتعلمين"
+                    description: "مدونة باللغة الإنجليزية مخصصة لشروحات Vue مليانة شروحات ومواضيع ممكن تفيد المتعلمين"
                 },
                 {
                     title: "دورة من laracasts",
                     link: "https://laracasts.com/series/learn-vue-2-step-by-step",
-                    description: "دورة Learn Vue 2: Step By Step مقدمة من laracasts لتعلم ڨيو من الصفر"
+                    description: "دورة Learn Vue 2: Step By Step مقدمة من laracasts لتعلم Vue من الصفر"
                 },
                 {
                     title: "سلسلة تعلم برمجة Vuejs",
                     link: "https://www.youtube.com/watch?v=ZH50a_ZbxFA&list=PLXgJ7cArk9uSB0kiR1ALOOOpiwJbd93b8",
-                    description: "سلسلة فيديو في اليتيوب لتعلم ڨيو",
+                    description: "سلسلة فيديو في اليتيوب لتعلم Vue",
                     isArabic: true
                 }
             ]

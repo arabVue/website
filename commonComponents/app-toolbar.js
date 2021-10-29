@@ -59,7 +59,7 @@ Vue.component("app-toolbar", {
                     path: "/resources/"
                 },
                 {
-                    title: "التوسع في ڨيو",
+                    title: "التوسع في Vue",
                     path: "/scaling/"
                 }
             ]
