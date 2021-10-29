@@ -1,16 +1,16 @@
 Vue.component("app-sections", {
     template: `
-        <div class="row justify-content-md-center">
-            <div class="col-12 col-sm-6 col-lg-4" v-for="section in sections">
+        <div class="row justify-content-md-center pt-3">
+            <div class="col-12 col-sm-6 col-lg-4 pb-2" v-for="section in sections">
                 <div class="card centered round" style="margin: 10px;">
                     <div class="card-body">
-                        <h5 class="card-title">
+                        <h4 class="card-title">
                             {{ section.title }}
-                        </h5>
+                        </h4>
                         <p class="card-text">
                             {{ section.description }}
                         </p>
-                        <a :href="section.link" class="btn round-button">
+                        <a :href="section.link" class="btn round-button" :target="section.target">
                             الذهاب للصفحة <i :class="section.icon" :title="section.title"></i>
                         </a>
                     </div>
@@ -20,7 +20,8 @@ Vue.component("app-sections", {
     `,
     data: function () {
         return {
-            sections: [{
+            sections: [
+                {
                     title: "قسم الاسئلة والاجوبة",
                     description: "بعض الاسئلة المجاب عليها",
                     link: "/questions/",
@@ -37,6 +38,20 @@ Vue.component("app-sections", {
                     description: "بعض مصادر التوسع في Vue",
                     link: "/scaling/",
                     icon: "fas fa-sort-amount-up"
+                },
+                {
+                    title: "الموقع على القتهب",
+                    description: "يمكنك معاينة الكود المصدري والمساهمة فيه",
+                    link: "https://github.com/ibrahimBeladi/arabVue",
+                    target: "_blank",
+                    icon: "fab fa-github",
+                },
+                {
+                    title: "المجموعة على تيليقرام",
+                    description: "يمكنك الدخول الى المجموعة لاخذ واعطاء العلم",
+                    link: "https://t.me/vuejsarab",
+                    target: "_blank",
+                    icon: "fab fa-telegram",
                 }
             ]
         }
