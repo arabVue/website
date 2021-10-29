@@ -1,6 +1,6 @@
 Vue.component("app-resources", {
     template: `
-        <div class="container">
+        <div class="container pt-5">
             <h2 class="section-header">
                 المصادر العربية
             </h2>

@@ -1,6 +1,6 @@
 Vue.component("app-questions", {
     template: `
-        <div class="container">
+        <div class="container pt-5">
             <div v-for="question,i in questions">
                 <a :href="'#'+i">
                     {{ question.title }}؟

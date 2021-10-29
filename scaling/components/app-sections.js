@@ -1,6 +1,6 @@
 Vue.component("app-sections", {
     template: `
-        <div class="container">
+        <div class="container pt-5">
 
             <div class="card round">
                 <div class="card-body">
